@@ -1,0 +1,10 @@
+/Users/ANickow/Desktop/DojoAssignments/C#/FundamentalsI/bin/Debug/netcoreapp2.0/FundamentalsI.deps.json
+/Users/ANickow/Desktop/DojoAssignments/C#/FundamentalsI/bin/Debug/netcoreapp2.0/FundamentalsI.runtimeconfig.json
+/Users/ANickow/Desktop/DojoAssignments/C#/FundamentalsI/bin/Debug/netcoreapp2.0/FundamentalsI.runtimeconfig.dev.json
+/Users/ANickow/Desktop/DojoAssignments/C#/FundamentalsI/bin/Debug/netcoreapp2.0/FundamentalsI.dll
+/Users/ANickow/Desktop/DojoAssignments/C#/FundamentalsI/bin/Debug/netcoreapp2.0/FundamentalsI.pdb
+/Users/ANickow/Desktop/DojoAssignments/C#/FundamentalsI/obj/Debug/netcoreapp2.0/FundamentalsI.csproj.CoreCompileInputs.cache
+/Users/ANickow/Desktop/DojoAssignments/C#/FundamentalsI/obj/Debug/netcoreapp2.0/FundamentalsI.AssemblyInfoInputs.cache
+/Users/ANickow/Desktop/DojoAssignments/C#/FundamentalsI/obj/Debug/netcoreapp2.0/FundamentalsI.AssemblyInfo.cs
+/Users/ANickow/Desktop/DojoAssignments/C#/FundamentalsI/obj/Debug/netcoreapp2.0/FundamentalsI.dll
+/Users/ANickow/Desktop/DojoAssignments/C#/FundamentalsI/obj/Debug/netcoreapp2.0/FundamentalsI.pdb
