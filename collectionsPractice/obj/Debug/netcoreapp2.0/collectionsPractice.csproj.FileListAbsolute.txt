@@ -1,0 +1,10 @@
+/Users/ANickow/Desktop/DojoAssignments/C#/collectionsPractice/bin/Debug/netcoreapp2.0/collectionsPractice.deps.json
+/Users/ANickow/Desktop/DojoAssignments/C#/collectionsPractice/bin/Debug/netcoreapp2.0/collectionsPractice.runtimeconfig.json
+/Users/ANickow/Desktop/DojoAssignments/C#/collectionsPractice/bin/Debug/netcoreapp2.0/collectionsPractice.runtimeconfig.dev.json
+/Users/ANickow/Desktop/DojoAssignments/C#/collectionsPractice/bin/Debug/netcoreapp2.0/collectionsPractice.dll
+/Users/ANickow/Desktop/DojoAssignments/C#/collectionsPractice/bin/Debug/netcoreapp2.0/collectionsPractice.pdb
+/Users/ANickow/Desktop/DojoAssignments/C#/collectionsPractice/obj/Debug/netcoreapp2.0/collectionsPractice.csproj.CoreCompileInputs.cache
+/Users/ANickow/Desktop/DojoAssignments/C#/collectionsPractice/obj/Debug/netcoreapp2.0/collectionsPractice.AssemblyInfoInputs.cache
+/Users/ANickow/Desktop/DojoAssignments/C#/collectionsPractice/obj/Debug/netcoreapp2.0/collectionsPractice.AssemblyInfo.cs
+/Users/ANickow/Desktop/DojoAssignments/C#/collectionsPractice/obj/Debug/netcoreapp2.0/collectionsPractice.dll
+/Users/ANickow/Desktop/DojoAssignments/C#/collectionsPractice/obj/Debug/netcoreapp2.0/collectionsPractice.pdb
