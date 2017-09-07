@@ -1,0 +1,10 @@
+/Users/ANickow/Desktop/DojoAssignments/C#/simpleCrud/bin/Debug/netcoreapp2.0/simpleCrud.deps.json
+/Users/ANickow/Desktop/DojoAssignments/C#/simpleCrud/bin/Debug/netcoreapp2.0/simpleCrud.runtimeconfig.json
+/Users/ANickow/Desktop/DojoAssignments/C#/simpleCrud/bin/Debug/netcoreapp2.0/simpleCrud.runtimeconfig.dev.json
+/Users/ANickow/Desktop/DojoAssignments/C#/simpleCrud/bin/Debug/netcoreapp2.0/simpleCrud.dll
+/Users/ANickow/Desktop/DojoAssignments/C#/simpleCrud/bin/Debug/netcoreapp2.0/simpleCrud.pdb
+/Users/ANickow/Desktop/DojoAssignments/C#/simpleCrud/obj/Debug/netcoreapp2.0/simpleCrud.csproj.CoreCompileInputs.cache
+/Users/ANickow/Desktop/DojoAssignments/C#/simpleCrud/obj/Debug/netcoreapp2.0/simpleCrud.AssemblyInfoInputs.cache
+/Users/ANickow/Desktop/DojoAssignments/C#/simpleCrud/obj/Debug/netcoreapp2.0/simpleCrud.AssemblyInfo.cs
+/Users/ANickow/Desktop/DojoAssignments/C#/simpleCrud/obj/Debug/netcoreapp2.0/simpleCrud.dll
+/Users/ANickow/Desktop/DojoAssignments/C#/simpleCrud/obj/Debug/netcoreapp2.0/simpleCrud.pdb
