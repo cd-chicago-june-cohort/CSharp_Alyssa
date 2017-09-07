@@ -1,0 +1,10 @@
+/Users/ANickow/Desktop/DojoAssignments/C#/sampleCoreMvcApp/bin/Debug/netcoreapp2.0/sampleCoreMvcApp.deps.json
+/Users/ANickow/Desktop/DojoAssignments/C#/sampleCoreMvcApp/bin/Debug/netcoreapp2.0/sampleCoreMvcApp.runtimeconfig.json
+/Users/ANickow/Desktop/DojoAssignments/C#/sampleCoreMvcApp/bin/Debug/netcoreapp2.0/sampleCoreMvcApp.runtimeconfig.dev.json
+/Users/ANickow/Desktop/DojoAssignments/C#/sampleCoreMvcApp/bin/Debug/netcoreapp2.0/sampleCoreMvcApp.dll
+/Users/ANickow/Desktop/DojoAssignments/C#/sampleCoreMvcApp/bin/Debug/netcoreapp2.0/sampleCoreMvcApp.pdb
+/Users/ANickow/Desktop/DojoAssignments/C#/sampleCoreMvcApp/obj/Debug/netcoreapp2.0/sampleCoreMvcApp.csproj.CoreCompileInputs.cache
+/Users/ANickow/Desktop/DojoAssignments/C#/sampleCoreMvcApp/obj/Debug/netcoreapp2.0/sampleCoreMvcApp.AssemblyInfoInputs.cache
+/Users/ANickow/Desktop/DojoAssignments/C#/sampleCoreMvcApp/obj/Debug/netcoreapp2.0/sampleCoreMvcApp.AssemblyInfo.cs
+/Users/ANickow/Desktop/DojoAssignments/C#/sampleCoreMvcApp/obj/Debug/netcoreapp2.0/sampleCoreMvcApp.dll
+/Users/ANickow/Desktop/DojoAssignments/C#/sampleCoreMvcApp/obj/Debug/netcoreapp2.0/sampleCoreMvcApp.pdb
