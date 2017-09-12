@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "PokeInfo";
+}
+<h1>@ViewBag.Name</h1>
+<img src = '@ViewBag.Sprite["front_default"]' alt = "@ViewBag.Name">
+<p>Primary Type: @ViewBag.PrimaryType</p>
+<p>Other Types: </p>
+    <ul>
+    @foreach (var type in ViewBag.OtherTypes){
+        <li>@type</li>
+    }
+    @if(ViewBag.OtherTypes.Length == 0){
+        <li><em>None</em></li>
+    }
+    </ul>
+<p>Height: @ViewBag.Height</p>
+<p>Weight: @ViewBag.Weight</p>
+
+
