@@ -1,0 +1,63 @@
+@{
+    ViewData["Title"] = "Notes";
+}
+<script>
+    $(document).ready(function(){
+        // AJAX posting of a note
+        $('#postNote').on('submit', function(event){
+            event.preventDefault();
+            title = $('input[name=title]').val();
+            $('input[name=title]').val('');
+            url = "notes/" + title;
+            $.post(url, function(response){
+                html = "<div id=" + response + ">"
+                html = "<h3>" + title + "</h3>"
+                html += '<form action="" method = "post">'
+                html += '<textarea class="updateDescription" noteId=' + response + ' name="description" cols="30" rows="10" placeholder="Enter description here..."></textarea>'
+                html += '<button class="delete" noteId=' + response + '>Delete</button>'
+                html += "<hr>"
+                html += "</div>"
+                $('#Notes').prepend(html);
+            })
+        })
+        //AJAX updating a notes description
+        $('#Notes').on('blur', '.updateDescription', function(){
+            data = {};
+            data.id = $(this).attr('noteId');
+            data.description = $(this).val();
+            $.post("update", data, function(){})
+        })
+
+        //AJAX deleting a note
+        $('#Notes').on('click', '.delete', function(){
+            data = {}
+            data.id = $(this).attr('noteId');
+            $.post("delete", data, function(){
+                divId = "#" + data.id;
+                $(divId).remove();
+            })
+        })
+
+    })
+</script>
+
+<h1>Notes</h1>
+<hr>
+<div id="Notes">
+@{
+foreach (var note in ViewBag.AllNotes){
+    <div id=@note["idnotes"]>
+        <h3>@note["title"]</h3>
+        <form action="" method = "post">
+            <textarea class = "updateDescription" noteId=@note["idnotes"] name="description" cols="30" rows="10" placeholder="Enter description here...">@note["description"]</textarea>     
+        </form>
+        <button class='delete' noteId=@note["idnotes"]>Delete</button>
+        <hr>
+    </div>
+}
+}
+</div>
+<form id="postNote" action="/notes" method="post">
+    <input type="text" name="title" placeholder="Insert note title here...">
+    <input type="submit" value='Add Note'>
+</form>
