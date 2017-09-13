@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "Quoting Dojo";
+}
+<h1>Here are the awesome quotes!</h1>
+@foreach (var quoteObj in ViewBag.AllQuotes){
+    <p>"@quoteObj["quote"]"</p>
+    <p> - @quoteObj["name"] at @quoteObj["created_at"].ToString("h:mm tt MMM d, yyyy")</p>
+    <hr>
+}
