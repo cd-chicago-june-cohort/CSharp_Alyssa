@@ -1,0 +1,15 @@
+/*Write all of your CSS here*/
+.error{
+    color: red;
+}
+
+#header{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+}
+
+.messageForm{
+    margin-top: 15px;
+    border-bottom: 1px solid black;
+}
