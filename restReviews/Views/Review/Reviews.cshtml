@@ -1,0 +1,11 @@
+@model IEnumerable<restReviews.Models.Review>
+@{
+    ViewData["Title"] = "Reviews";
+}
+
+@foreach(var review in @Model){
+    <h3>Review for: @review.restaurant &nbsp&nbsp&nbsp @review.rating star(s)</h3>
+    <h4>Reviewer: @review.author, @review.date.ToString("MMM d, yyyy")</h4>
+    <p>@review.review</p>
+    <hr>
+}

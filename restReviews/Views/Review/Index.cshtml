@@ -1,0 +1,23 @@
+@model restReviews.Models.Review
+@{
+    ViewData["Title"] = "Add a Review";
+}
+<h1>Write a new Review:</h1>
+<form asp-controller="Review" asp-action="AddReview" method="post">
+    <label asp-for="author"></label>
+    <input class="u-full-width" asp-for="author">
+    <span class='error' asp-validation-for="author"></span>
+    <label asp-for="restaurant"></label>
+    <input class="u-full-width" asp-for="restaurant">
+    <span class='error' asp-validation-for="restaurant"></span>
+    <label asp-for="review"></label>
+    <input class="u-full-width" asp-for="review">
+    <span class='error' asp-validation-for="review"></span>
+    <label asp-for="date"></label>
+    <input asp-for="date">
+    <span class='error' asp-validation-for="date"></span>
+    <label asp-for="rating"></label>
+    <input asp-for="rating">
+    <span class='error' asp-validation-for="rating"></span>
+    <button type="submit">Add!</button>
+</form>
