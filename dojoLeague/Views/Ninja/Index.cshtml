@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Dojo League - Ninjas";
+}
+@model dojoLeague.Models.Ninja
+
+<div class="row">
+    <div class="one-half column">
+        <h1>Registered Ninjas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ninja Name</th>
+                    <th>Home Dojo</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var ninja in ViewBag.Ninjas){
+                    <tr>
+                        <td><a asp-controller="Ninja" asp-action="ShowNinja" asp-route-id="@ninja.id">@ninja.name</a></td>
+                        @if(@ninja.dojo.id != 1){
+                            <td><a asp-controller="Dojo" asp-action="ShowDojo" asp-route-id="@ninja.dojo.id">@ninja.dojo.name</a></td>
+                        } else {
+                            <td>Rogue</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="one-half column">
+        <h1>Register a Ninja</h1>
+        <form asp-controller="Ninja" asp-action="AddNinja" method="post">
+            <label asp-for="name"></label>
+            <input asp-for="name">
+            <span class='error' asp-validation-for="name"></span>
+            <label asp-for="level"></label>
+            <input asp-for="level">
+            <span class='error' asp-validation-for="level"></span>
+            <label for="dojo">Assigned Dojo?</label>
+            <select name="dojo">
+                @foreach(var dojo in ViewBag.Dojos){
+                    <option value="@dojo.id">@dojo.name</option>
+                }
+            </select>
+            <label asp-for="description"></label>
+            <input asp-for="description">
+            <button type="submit">Add!</button>
+        </form>
+    </div>
+</div>

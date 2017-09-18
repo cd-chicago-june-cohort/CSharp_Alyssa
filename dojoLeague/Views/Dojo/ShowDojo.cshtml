@@ -1,0 +1,48 @@
+@model dojoLeague.Models.Dojo
+@{
+    ViewData["Title"] = "Dojo League - @Model.name";
+}
+<h1>@Model.name</h1>
+<p>Dojo Location - @Model.location</p>
+<p>Information: @Model.information</p>
+
+<div class="row">
+    <div class="one-half column">
+        <h1>Current Members</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ninja</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var ninja in @Model.ninjas){
+            <tr>
+                <td><a asp-controller="Ninja" asp-action="ShowNinja" asp-route-id="@ninja.id">@ninja.name</a></td>
+                <td><a asp-controller="Ninja" asp-Action="Banish" asp-route-id="@ninja.id" asp-route-dojo_id="@Model.id">Banish!</a></td>
+            </tr>
+        }
+            </tbody>
+        </table>
+    </div>
+    <div class="one-half column">
+        <h1>Rogue Ninjas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ninja</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ninja in @ViewBag.Rogue.ninjas){
+                    <tr>
+                        <td><a asp-controller="Ninja" asp-action="ShowNinja" asp-route-id="@ninja.id">@ninja.name</a></td>
+                        <td><a asp-controller="Ninja" asp-Action="Recruit" asp-route-id="@ninja.id" asp-route-dojo_id="@Model.id">Recruit!</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

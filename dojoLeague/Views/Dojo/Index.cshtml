@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "Dojo League - Dojos";
+}
+@model dojoLeague.Models.Dojo
+
+<div class="row">
+    <div class="one-half column">
+        <h1>All Ninjas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dojo Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var dojo in ViewBag.dojos){
+                    <tr>
+                        @if(dojo.name == "Rogue"){
+                            continue;
+                        } else {
+                        <td><a asp-controller="Dojo" asp-action="ShowDojo" asp-route-id="@dojo.id">@dojo.name</a></td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="one-half column">
+        <h1>Register a Dojo</h1>
+        <form asp-controller="Dojo" asp-action="AddDojo" method="post">
+            <label asp-for="name"></label>
+            <input asp-for="name">
+            <span class='error' asp-validation-for="name"></span>
+            <label asp-for="location"></label>
+            <input asp-for="location">
+            <span class='error' asp-validation-for="location"></span>
+            <label asp-for="information"></label>
+            <input asp-for="information">
+            <button type="submit">Add!</button>
+        </form>
+    </div>
+</div>

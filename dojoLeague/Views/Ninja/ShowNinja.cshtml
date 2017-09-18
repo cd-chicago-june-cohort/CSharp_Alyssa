@@ -1,0 +1,12 @@
+@model dojoLeague.Models.Ninja
+@{
+    ViewData["Title"] = "Dojo League - @Model.name";
+}
+<h1>Name: @Model.name</h1>
+<p>Ninja Level - @Model.level</p>
+<p>Description: @Model.description</p>
+@if(@Model.dojo.id != 1){
+    <p>Current Dojo: <a asp-controller="Dojo" asp-action="ShowDojo" asp-route-id="@Model.dojo.id">@Model.dojo.name</a></p>
+} else {
+    <p>Current Dojo: Rogue</p>
+}
