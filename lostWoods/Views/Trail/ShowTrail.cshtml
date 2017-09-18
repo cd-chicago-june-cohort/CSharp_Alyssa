@@ -1,0 +1,13 @@
+
+@model lostWoods.Models.Trail
+ 
+<h2>@Model.name<h2>
+<h3>Description</h3>
+<p>@Model.description</p>
+<h3>Trail Length:</h3>
+<p>@Math.Round(@Model.length, 2) Miles</p>
+<h3>Elevation Change</h3>
+<p>@Model.elev_change Feet</p>
+<h5>Longitude - @Model.longitude</h5>
+<h5>Latitude - @Model.latitude</h5>
+<a asp-controller="Trail" asp-action="Index">Go Home</a>

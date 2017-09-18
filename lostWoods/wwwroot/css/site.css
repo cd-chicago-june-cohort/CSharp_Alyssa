@@ -1,0 +1,9 @@
+/*Write all of your CSS here*/
+.header{
+    display: flex;
+    justify-content: space-around;
+}
+
+.error{
+    color: red;
+}

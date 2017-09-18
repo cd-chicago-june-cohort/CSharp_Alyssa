@@ -1,0 +1,23 @@
+@model lostWoods.Models.TrailViewModel
+<h1>Add a New Trail</h1>
+<form asp-controller="Trail" asp-action="AddTrail" method="post">
+    <label asp-for="name"></label>
+    <input asp-for="name"/>
+    <span class='error' asp-validation-for="name"></span>
+    <label asp-for="description"></label>
+    <input asp-for="description"/>
+    <span class='error' asp-validation-for="description"></span>
+    <label asp-for="length"></label>
+    <input asp-for="length"/>
+    <span class='error' asp-validation-for="length"></span>
+    <label asp-for="elev_change"></label>
+    <input asp-for="elev_change"/>
+    <span class='error' asp-validation-for="elev_change"></span>
+    <label>Longitude & Latitude</label>
+    <input asp-for="longitude"/>
+    <span class='error' asp-validation-for="longitude"></span>
+    <input asp-for="latitude"/>
+    <span class='error' asp-validation-for="latitude"></span>
+    <button type="submit">Create Record!</button>
+</form>
+<a asp-controller="Trail" asp-action="Index">Go Home</a>
