@@ -1,0 +1,25 @@
+@using bankAccounts.Models
+@model bankAccounts.Models.User
+@{
+    ViewData["Title"] = "Account";
+}
+<h1>Welcome @Model.first_name</h1>
+<h3> Current Balance: @ViewBag.balance</h3>
+@Html.Partial("TransactionForm", (TransactionViewModel)@ViewBag.Transaction)
+<table>
+    <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var transaction in @Model.Transactions){
+            <tr>
+                <td>transaction.amount</td>
+                <td>transaction.date.ToString("MMM d, yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

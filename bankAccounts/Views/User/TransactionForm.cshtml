@@ -1,0 +1,7 @@
+@model bankAccounts.Models.TransactionViewModel
+<form asp-controller="User" asp-action="ProcessTransaction" method="post">
+    <label asp-for="amount"></label>
+    <input asp-for="amount"/>
+    <span>@ViewBag.Error</span>
+    <br><button type="submit">Submit</button>
+</form>
