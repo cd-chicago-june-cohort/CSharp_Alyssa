@@ -13,11 +13,6 @@ namespace bankAccounts.Models
         public string password { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
-        public List<Transaction> Transactions { get; set; }
-
-        public User()
-        {
-            Transactions = new List<Transaction>();
-        }
+        
     }
 }

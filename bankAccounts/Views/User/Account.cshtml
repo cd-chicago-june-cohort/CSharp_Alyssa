@@ -14,10 +14,10 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var transaction in @Model.Transactions){
+        @foreach(var transaction in @ViewBag.UserTransactions){
             <tr>
-                <td>transaction.amount</td>
-                <td>transaction.date.ToString("MMM d, yyyy")</td>
+                <td>@transaction.amount</td>
+                <td>@transaction.date.ToString("MMM d, yyyy")</td>
             </tr>
         }
     </tbody>

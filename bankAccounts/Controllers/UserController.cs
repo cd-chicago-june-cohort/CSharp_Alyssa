@@ -94,17 +94,20 @@ namespace bankAccounts.Controllers
             if (currUser.id != loggedInId){
                 return RedirectToAction("Account", new { id  = loggedInId });
             }
-            int balance = 0;
-            foreach (var transaction in currUser.Transactions){
-                balance += transaction.amount;
-            }
-            HttpContext.Session.SetInt32("Balance", balance);
+            
             if(TempData["InsuffFunds"] != null){
                 ViewBag.Error = TempData["InsuffFunds"];
             } else {
                 ViewBag.Error = "";
             }
+            int balance = 0;
+            List<Transaction> transactions = _context.Transactions.Where(transaction => transaction.UserId == id).OrderByDescending(transaction => transaction.date).ToList();
+            foreach (var transaction in transactions){
+                balance += transaction.amount;
+            }
+            HttpContext.Session.SetInt32("Balance", balance);
             ViewBag.Balance = balance;
+            ViewBag.UserTransactions = transactions;
             ViewBag.Transaction = new TransactionViewModel();
             return View(currUser);
         }
@@ -114,13 +117,15 @@ namespace bankAccounts.Controllers
         public IActionResult ProcessTransaction(TransactionViewModel model)
         {
             int? loggedInId = HttpContext.Session.GetInt32("CurrUser");
-            int? balance = HttpContext.Session.GetInt32("balance");
-            if (balance - model.amount<0){
+            int? balance = HttpContext.Session.GetInt32("Balance");
+            if ((balance + model.amount) < 0){
                 TempData["InsuffFunds"] = "Insufficient Funds";
+            } else if (model.amount == 0) {
+                TempData["InsuffFunds"] = "";
             } else {
                 Transaction newTransaction = new Transaction
                 {
-                    
+                    UserId = (int)loggedInId,
                     date = DateTime.Now,
                     amount = model.amount   
                 };

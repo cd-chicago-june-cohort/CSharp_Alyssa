@@ -9,6 +9,6 @@ namespace bankAccounts.Models
         public long id { get; set; }
         public int amount { get; set; }
         public DateTime date { get; set; }
-
+        public long UserId { get; set; }
     }
 }
